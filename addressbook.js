@@ -22,7 +22,6 @@ Person.prototype = {
     }
 };
 var person1 = new Person('Andy','Ding');
-var person2 = new Person('Bonnie','Ding');
 person1.addEmail('andyding@yahoo.com','home');
 person1.addEmail('ading@eoriginal.com','work');
 console.log(person1);
