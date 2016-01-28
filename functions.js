@@ -70,7 +70,9 @@ function operationMaker(operation){
     }
     return operationDoer;
 }
-var adder = operationMaker("add"); var sum = adder(5,10);
+//var adder = operationMaker("add"); var sum = adder(5,10);
+var sum = operationMaker("add")(5,10);
 console.log(sum);
-var multiplier = operationMaker("mult"); var product = multiplier(5,10);
+//var multiplier = operationMaker("mult"); var product = multiplier(5,10);
+var product = operationMaker("mult")(5,10);
 console.log(product);
