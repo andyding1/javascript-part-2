@@ -52,18 +52,19 @@ function objectNumSquare(object){
 console.log(objectNumArray.map(objectNumSquare));
 
 //In a previous workshop, you had to create a function that took two numbers and an operation (add, sub, mult, …) and returned the result of the operation on the two numbers. Here we are going to do the same but at a higher order. Create a function called operationMaker that takes only a string called operation as argument. This string could be “add”, “subtract”, “mult” or “div”. Your function will return a function that will take two numbers and return the result of running operation on these numbers.
+//modify operationMaker("add")[2,4];
 function operationMaker(operation){
     function operationDoer(num1,num2){
-        if(operation === 'add'){
+        switch(operation){
+            case 'add':
                 return num1+num2;
-        }   else if(operation === 'subtract'){
+            case 'subtract':
                 return num1-num2;
-        }   else if(operation === 'mult'){
+            case 'mult':
                 return num1*num2;
-        }   else if(operation === 'div'){
+            case 'div':
                 return num1/num2;
-        }
-        else {
+            default:
                 return 0;
         }
     }
